@@ -5,7 +5,7 @@ dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
 load_dotenv(dotenv_path)
 from openai import OpenAI
 
-def translation():
+def text_translation():
  client = OpenAI(
   api_key = os.getenv('API_KEY')
  )
@@ -14,9 +14,9 @@ def translation():
    {"role": "system", "content": "당신은 모든 질문에 답할 수 있습니다. 당신의 이름은 language master입니다. 당신은 세계 최고의 언어학자입니다."}
  ]
  while 1:
-  prompt = input("번역할 단어 또는 문장을 입력하세요: ")
+  prompt = input("\n번역할 단어 또는 문장을 입력하세요: ")
   if prompt == 'p':
-   m.run_menu()
+   m.run_menu2()
   elif prompt == 'x':
    print('프로그램을 종료합니다.')
    exit()

@@ -14,9 +14,9 @@ def speach_to_text():
   today_default = dt.datetime.today()            # 현재 날짜 가져오기
   today = today_default.strftime("%Y%m%d%H%M%S")  # YYYY/mm/dd HH:MM 형태의 시간 출력
   path = 'whisper/results/speach to text result_'+today+'.txt'
-  audio_file_name = input('오디오 파일명: ')
+  audio_file_name = input('\n오디오 파일명: ')
   if audio_file_name == 'p':
-   m.run_menu()
+   m.run_menu3()
   elif audio_file_name == 'x':
    print('프로그램을 종료합니다.')
    exit()

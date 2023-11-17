@@ -6,11 +6,11 @@ load_dotenv(dotenv_path)
 import datetime as dt
 from openai import OpenAI
 
-def audio_translation():
+def file_translation():
  while 1:
-  audio_file_name = input('오디오 파일명: ')
+  audio_file_name = input('\n오디오 파일명: ')
   if audio_file_name == 'p':
-   m.run_menu()
+   m.run_menu4()
   elif audio_file_name == 'x':
    print('프로그램을 종료합니다.')
    exit()
@@ -64,4 +64,4 @@ def arrive_language(audio_file_name):
    f.write(answer+'\n')
    f.close()
    print(path+'에 저장했습니다.\n')
-  audio_translation()
+  file_translation()

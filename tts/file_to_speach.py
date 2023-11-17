@@ -9,9 +9,9 @@ from openai import OpenAI
 
 def file_to_speach():
  while 1:
-  text_file_name = input("텍스트 파일명: ")
+  text_file_name = input("\n텍스트 파일명: ")
   if text_file_name == 'p':
-   m.run_menu()
+   m.run_menu5()
   elif text_file_name == 'x':
    print('프로그램을 종료합니다.')
    exit()

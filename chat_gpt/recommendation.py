@@ -14,9 +14,9 @@ def recommendation():
    {"role": "system", "content": "당신은 모든 질문에 답할 수 있습니다. 당신의 이름은 챗친입니다. 당신은 세계 최고의 작문가입니다."}
  ]
  while 1:
-  prompt = input("주제 생성을 위한 키워드를 입력하세요: ")
+  prompt = input("\n주제 생성을 위한 키워드를 입력하세요: ")
   if prompt == 'p':
-   m.run_menu()
+   m.run_menu1()
   elif prompt == 'x':
    print('프로그램을 종료합니다.')
    exit()

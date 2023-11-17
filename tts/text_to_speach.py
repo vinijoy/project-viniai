@@ -8,9 +8,9 @@ from openai import OpenAI
 
 def text_to_speach():
  while 1:
-  prompt = input("음성으로 변환할 텍스트를 입력하세요: ")
+  prompt = input("\n음성으로 변환할 텍스트를 입력하세요: ")
   if prompt == 'p':
-   m.run_menu()
+   m.run_menu5()
   elif prompt == 'x':
    print('프로그램을 종료합니다.')
    exit()

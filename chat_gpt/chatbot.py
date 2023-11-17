@@ -14,9 +14,9 @@ def chatbot():
    {"role": "system", "content": "당신은 모든 질문에 답할 수 있습니다. 당신의 이름은 챗친입니다. 당신은 세계 최고의 상담사입니다."}
  ]
  while 1:
-  prompt = input("요청할 내용을 입력하세요: ")
+  prompt = input("\n요청할 내용을 입력하세요: ")
   if prompt == 'p':
-   m.run_menu()
+   m.run_menu1()
   elif prompt == 'x':
    print('프로그램을 종료합니다.')
    exit()
