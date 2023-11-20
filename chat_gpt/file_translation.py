@@ -1,17 +1,15 @@
 import menu as m
-from dotenv import load_dotenv
-import os
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
-load_dotenv(dotenv_path)
 import datetime as dt
 import re
-from openai import OpenAI
+from authorization import *
 
 def file_translation():
  while 1:
   text_file_name = input("\n텍스트 파일명: ")
   if text_file_name == 'p':
    m.run_menu2()
+  elif text_file_name == 't':
+   m.run_menu()
   elif text_file_name == 'x':
    print('프로그램을 종료합니다.')
    exit()

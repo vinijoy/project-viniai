@@ -1,9 +1,5 @@
 import menu as m
-from dotenv import load_dotenv
-import os
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
-load_dotenv(dotenv_path)
-from openai import OpenAI
+from authorization import *
 
 def recommendation():
  client = OpenAI(
@@ -17,6 +13,8 @@ def recommendation():
   prompt = input("\n주제 생성을 위한 키워드를 입력하세요: ")
   if prompt == 'p':
    m.run_menu1()
+  elif prompt == 't':
+   m.run_menu()
   elif prompt == 'x':
    print('프로그램을 종료합니다.')
    exit()

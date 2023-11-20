@@ -1,9 +1,5 @@
 import menu as m
-from dotenv import load_dotenv
-import os
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
-load_dotenv(dotenv_path)
-from openai import OpenAI
+from authorization import *
 
 def text_translation():
  client = OpenAI(
@@ -17,6 +13,8 @@ def text_translation():
   prompt = input("\n번역할 단어 또는 문장을 입력하세요: ")
   if prompt == 'p':
    m.run_menu2()
+  elif prompt == 't':
+   m.run_menu()
   elif prompt == 'x':
    print('프로그램을 종료합니다.')
    exit()

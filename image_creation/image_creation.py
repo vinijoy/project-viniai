@@ -1,10 +1,6 @@
 import menu as m
-from dotenv import load_dotenv
-import os
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
-load_dotenv(dotenv_path)
 import pyperclip as pc
-from openai import OpenAI
+from authorization import *
 
 def image_creation():
  client = OpenAI(
@@ -14,6 +10,8 @@ def image_creation():
   image_explaining = input("\n생성할 이미지를 묘사해 주세요: ")
   if image_explaining == 'p':
    m.run_menu7()
+  elif image_explaining == 't':
+   m.run_menu()
   elif image_explaining == 'x':
    print('프로그램을 종료합니다.')
    exit()

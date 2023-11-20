@@ -1,16 +1,14 @@
 import menu as m
-from dotenv import load_dotenv
-import os
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
-load_dotenv(dotenv_path)
 import datetime as dt
-from openai import OpenAI
+from authorization import *
 
 def file_translation():
  while 1:
   audio_file_name = input('\n오디오 파일명: ')
   if audio_file_name == 'p':
    m.run_menu4()
+  elif audio_file_name == 't':
+   m.run_menu()
   elif audio_file_name == 'x':
    print('프로그램을 종료합니다.')
    exit()
@@ -40,7 +38,7 @@ def arrive_language(audio_file_name):
   script = transcript.text
  except FileNotFoundError:
   print("파일을 찾을 수 없습니다.")
-  audio_translation()
+  file_translation()
  while 1:
   language = input("도착언어를 입력하세요: ")
   if language == 'p':
